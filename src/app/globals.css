@@ -1,15 +1,19 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-void: #0b0b0c;
+  --color-void: #0d0d0e;
   --color-coal: #151517;
-  --color-slate: #222226;
-  --color-bone: #f4f1ee;
-  --color-fog: #8d8a90;
-  --color-carmim: #e0144c;
-  --color-carmim-deep: #6d0a26;
+  --color-slate: #202023;
+  --color-bone: #f5f3ef;
+  --color-fog: #9a968f;
+  --color-gold: #c99e67;
+  --color-gold-hover: #dfb987;
+  --color-gold-deep: #856133;
+  --color-carmim: #c99e67;
+  --color-carmim-deep: #856133;
   --font-sans: var(--font-inter);
-  --font-display: var(--font-anton);
+  --font-serif: var(--font-lora);
+  --font-display: var(--font-lora);
   --font-mono: var(--font-space-mono);
 }
 
@@ -24,8 +28,20 @@ body {
 }
 
 ::selection {
-  background: var(--color-carmim);
-  color: var(--color-bone);
+  background: var(--color-gold);
+  color: #0d0d0e;
+}
+
+.text-gold {
+  color: #c99e67;
+}
+
+.bg-gold {
+  background-color: #c99e67;
+}
+
+.border-gold {
+  border-color: #c99e67;
 }
 
 /* Granulado por cima dos placeholders de foto */
@@ -41,7 +57,7 @@ body {
 
 .text-outline {
   color: transparent;
-  -webkit-text-stroke: 1px rgb(244 241 238 / 0.12);
+  -webkit-text-stroke: 1px rgb(201 158 103 / 0.15);
 }
 
 @keyframes spin-slow {

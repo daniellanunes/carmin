@@ -1,10 +1,12 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Manifesto from "@/components/Manifesto";
+import Styles from "@/components/Styles";
 import Works from "@/components/Works";
-import Social from "@/components/Social";
-import Flash from "@/components/Flash";
+import Selos from "@/components/Selos";
+import Studio from "@/components/Studio";
 import Booking from "@/components/Booking";
+import Social from "@/components/Social";
 import Footer from "@/components/Footer";
 import RevealOnScroll from "@/components/RevealOnScroll";
 
@@ -16,10 +18,12 @@ export default function Home() {
       <main className="flex-1">
         <Hero />
         <Manifesto />
+        <Styles />
         <Works />
-        <Social />
-        <Flash />
+        <Selos />
+        <Studio />
         <Booking />
+        <Social />
       </main>
       <Footer />
     </>
