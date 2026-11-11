@@ -46,17 +46,7 @@ export default function Footer() {
               “Um corpo sem pintura é um corpo mudo.”
               <br />
               Tatuagens autorais, técnicas exclusivas e projeto Os Selos no Salvador Tattoo Studio.
-            </p>
-            <div className="mt-6">
-              <a
-                href="https://wa.me/5571989331091?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20or%C3%A7amento!"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 border border-gold px-6 py-2.5 font-mono text-xs font-bold uppercase tracking-[0.2em] text-gold hover:bg-gold hover:text-void transition-colors"
-              >
-                Orçamento via WhatsApp <Arrow className="h-3.5 w-3.5" />
-              </a>
-            </div>
+            </p>            
           </div>
 
           <div className="grid grid-cols-2 gap-8 sm:grid-cols-3">
@@ -85,20 +75,10 @@ export default function Footer() {
         {/* Linha de Copyright com créditos originais */}
         <div className="mt-16 flex flex-col md:flex-row items-center justify-between gap-4 border-t border-white/10 pt-8 font-mono text-[11px] uppercase tracking-[0.15em] text-fog">
           <span>
-            Copyright © 2025{" "}
+            Copyright © 2027{" "}
             <strong className="text-bone font-normal">TomCash Tattoo</strong>. Todos os direitos reservados.
           </span>
-          <span className="flex items-center gap-2">
-            Desenvolvido por{" "}
-            <a
-              href="https://www.linkedin.com/in/anna-caroline-miranda-martins/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gold underline hover:text-gold-hover transition-colors"
-            >
-              Anna Caroline Miranda Martins
-            </a>
-          </span>
+          
         </div>
       </div>
     </footer>

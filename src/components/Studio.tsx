@@ -60,7 +60,7 @@ export default function Studio() {
                 <Star className="h-2.5 w-2.5" /> Climatizado
               </span>
               <span className="inline-flex items-center gap-1.5 border border-gold/40 bg-gold/10 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-gold">
-                <Star className="h-2.5 w-2.5" /> Vista para o Farol
+                <Star className="h-2.5 w-2.5" /> Vista para o Mar
               </span>
               <span className="inline-flex items-center gap-1.5 border border-gold/40 bg-gold/10 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-gold">
                 <Star className="h-2.5 w-2.5" /> Biossegurança

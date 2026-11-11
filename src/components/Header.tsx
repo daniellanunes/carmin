@@ -35,26 +35,6 @@ export default function Header() {
           ))}
         </nav>
 
-        <div className="flex shrink-0 items-center gap-2 sm:gap-3">
-          <a
-            href="https://wa.me/5571989331091?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20or%C3%A7amento!"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="border border-gold px-2.5 py-2 font-mono text-[10px] font-bold uppercase tracking-[0.12em] text-gold transition-all hover:bg-gold hover:text-void sm:px-4 sm:text-[11px] sm:tracking-[0.2em]"
-          >
-            Orçamento
-          </a>
-          <button
-            type="button"
-            aria-label={open ? "Fechar menu" : "Abrir menu"}
-            aria-expanded={open}
-            onClick={() => setOpen((v) => !v)}
-            className="flex h-9 w-9 flex-col items-center justify-center gap-1.5 lg:hidden text-bone"
-          >
-            <span className={`h-0.5 w-6 bg-gold transition-transform duration-300 ${open ? "translate-y-[4px] rotate-45" : ""}`} />
-            <span className={`h-0.5 w-6 bg-gold transition-transform duration-300 ${open ? "-translate-y-[4px] -rotate-45" : ""}`} />
-          </button>
-        </div>
       </div>
 
       {open && (

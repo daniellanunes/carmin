@@ -55,7 +55,7 @@ export default function Social() {
   return (
     <section id="localizacao" className="scroll-mt-20 py-24 md:py-32 bg-coal border-t border-white/5">
       <div className="mx-auto max-w-7xl px-4 md:px-8">
-        <div className="reveal text-center max-w-2xl mx-auto">
+        <div className="reveal max-w-2xl">
           <span className="font-mono text-xs uppercase tracking-[0.25em] text-gold font-bold">
             06 — Onde Me Encontrar
           </span>
@@ -64,7 +64,7 @@ export default function Social() {
             <br />
             Redes Sociais
           </SectionTitle>
-          <p className="mt-4 text-sm md:text-base text-bone/70">
+          <p className="mt-4 max-w-md text-sm text-bone/70">
             Venha conhecer o estúdio em frente ao mar da Barra ou acompanhe todo o processo artístico online.
           </p>
         </div>
@@ -126,7 +126,7 @@ export default function Social() {
                 Av. Oceânica, 551 - sala 106 - Barra
               </p>
               <p className="text-sm text-bone/60">Salvador - BA, CEP 40140-080</p>
-              <p className="mt-2 text-xs italic text-gold">Em frente ao mar e ao Farol da Barra</p>
+              <p className="mt-2 text-xs italic text-gold">Em frente ao mar e próximo ao Farol da Barra</p>
             </div>
 
             <div className="mt-8 border-t border-white/10 pt-6">
@@ -136,24 +136,22 @@ export default function Social() {
               <dl className="space-y-2 font-mono text-xs text-bone/80">
                 <div className="flex justify-between border-b border-white/5 pb-1">
                   <dt className="text-fog">Segunda a Sexta:</dt>
-                  <dd className="font-bold text-bone">08h às 23:30</dd>
+                  <dd className="font-bold text-bone">08h às 00:00</dd>
                 </div>
                 <div className="flex justify-between border-b border-white/5 pb-1">
                   <dt className="text-fog">Sábado:</dt>
-                  <dd className="font-bold text-bone">08h às 22:00</dd>
+                  <dd className="font-bold text-bone">10h às 00:00</dd>
                 </div>
                 <div className="flex justify-between">
                   <dt className="text-fog">Domingo:</dt>
-                  <dd className="font-bold text-bone">08h às 22:00</dd>
+                  <dd className="font-bold text-bone">14h às 00:00</dd>
                 </div>
               </dl>
             </div>
 
             <div className="mt-8 pt-4">
               <a
-                href="https://wa.me/5571989331091?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20hor%C3%A1rio!"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#orcamento"
                 className="block w-full text-center bg-gold py-3 font-mono text-xs font-bold uppercase tracking-[0.2em] text-void hover:bg-gold-hover transition-colors"
               >
                 Agendar Horário

@@ -166,9 +166,7 @@ export default function Works() {
             Quer uma arte exclusiva pensada para o seu corpo?
           </p>
           <a
-            href="https://wa.me/5571989331091?text=Ol%C3%A1%2C%20vi%20a%20galeria%20e%20gostaria%20de%20fazer%20um%20or%C3%A7amento!"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#orcamento"
             className="mt-4 inline-flex items-center gap-2 border border-gold px-8 py-3.5 font-mono text-xs font-bold uppercase tracking-[0.2em] text-gold transition-all hover:bg-gold hover:text-void"
           >
             Pedir Orçamento da Minha Ideia <Arrow className="h-4 w-4" />

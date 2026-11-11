@@ -89,9 +89,7 @@ export default function Hero() {
 
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <a
-              href="https://wa.me/5571989331091?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20or%C3%A7amento!"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#orcamento"
               className="flex items-center gap-2 bg-gold px-8 py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-void transition-all hover:bg-gold-hover hover:shadow-[0_0_20px_rgba(216,195,174,0.4)]"
             >
               Fazer Orçamento <Arrow className="h-4 w-4" />

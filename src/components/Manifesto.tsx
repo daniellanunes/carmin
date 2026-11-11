@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Label, Star } from "./Ui";
+import { SectionTitle, Star } from "./Ui";
 
 const techniques = [
   {
@@ -29,12 +29,14 @@ export default function Manifesto() {
         <div className="grid gap-12 lg:grid-cols-[1.1fr_1fr] lg:gap-16 items-center">
           {/* Coluna Texto e Apresentação */}
           <div className="reveal">
-            <Label>01 — O Artista</Label>
-            <h2 className="mt-4 font-serif text-[clamp(2.5rem,5.5vw,4.5rem)] font-bold uppercase leading-[1.05] text-bone">
+            <span className="font-mono text-xs uppercase tracking-[0.25em] text-gold font-bold">
+              01 — O Artista
+            </span>
+            <SectionTitle className="mt-3">
               Tom Cash
               <br />
-              <span className="text-gold italic font-normal text-[0.85em]">Salvador Tattoo Studio</span>
-            </h2>
+              Salvador Tattoo Studio
+            </SectionTitle>
 
             <p className="mt-6 text-base leading-relaxed text-bone/90 md:text-lg">
               Sou co-proprietário do estúdio <strong>Salvador Tattoo</strong> e atuo como tatuador há alguns anos.

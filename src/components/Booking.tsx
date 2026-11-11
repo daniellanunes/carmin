@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Arrow, Label, Star } from "./Ui";
+import { Arrow, SectionTitle, Star } from "./Ui";
 
 const inputField =
   "w-full border border-white/10 bg-void px-4 py-3.5 text-sm text-bone outline-none transition-colors placeholder:text-fog focus:border-gold";
@@ -37,12 +37,14 @@ export default function Booking() {
         <div className="grid gap-12 lg:grid-cols-[1.1fr_1fr] lg:gap-16">
           {/* Coluna Informações e Termos */}
           <div className="reveal">
-            <Label>05 — Orçamento &amp; Agendamento</Label>
-            <h2 className="mt-4 font-serif text-[clamp(2.5rem,5.5vw,4.5rem)] font-bold uppercase leading-[1.05] text-bone">
+            <span className="font-mono text-xs uppercase tracking-[0.25em] text-gold font-bold">
+              05 — Orçamento &amp; Agendamento
+            </span>
+            <SectionTitle className="mt-3">
               Vamos fazer um
               <br />
-              <span className="text-gold italic font-normal">orçamento?</span>
-            </h2>
+              orçamento?
+            </SectionTitle>
             <p className="mt-6 text-sm md:text-base leading-relaxed text-bone/80">
               Cada tatuagem é única — e o orçamento também. O valor de um trabalho é definido com base em fatores
               como tamanho, nível de detalhamento, localização anatômica, tempo estimado de execução e estilo escolhido.
