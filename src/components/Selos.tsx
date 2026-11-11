@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { Arrow, SectionTitle, Star } from "./Ui";
 
@@ -35,11 +35,55 @@ const selosList = [
     src: "/assets/IMGselo_5-DoiVpO5e.webp",
     theme: "Composição Nostalgia & Afeto",
   },
+  {
+    id: 6,
+    name: "Selo Memória VI",
+    src: "/assets/selos/selo-van-gogh.webp",
+    theme: "Releitura Van Gogh",
+  },
+  {
+    id: 7,
+    name: "Selo Memória VII",
+    src: "/assets/selos/selo-rio.webp",
+    theme: "Cartão-Postal Rio de Janeiro",
+  },
+  {
+    id: 8,
+    name: "Selo Memória VIII",
+    src: "/assets/selos/selo-farol.webp",
+    theme: "Farol & Sincronicidade",
+  },
+  {
+    id: 9,
+    name: "Selo Memória IX",
+    src: "/assets/selos/selo-postal.webp",
+    theme: "Retrato em Selo Postal",
+  },
 ];
 
 export default function Selos() {
   const [active, setActive] = useState(2);
   const current = selosList[active];
+  const scrollerRef = useRef<HTMLDivElement>(null);
+  const firstRun = useRef(true);
+
+  // Centraliza o selo ativo no carrossel (sem mexer na rolagem vertical da página).
+  useEffect(() => {
+    const scroller = scrollerRef.current;
+    if (!scroller) return;
+    const behavior: ScrollBehavior = firstRun.current ? "instant" : "smooth";
+    firstRun.current = false;
+    const center = () => {
+      const el = scroller.querySelectorAll<HTMLElement>("[data-selo]")[active];
+      if (!el) return;
+      const left = el.offsetLeft + el.offsetWidth / 2 - scroller.clientWidth / 2;
+      scroller.scrollTo({ left, behavior });
+    };
+    center();
+    // o selo cresce com transição de 500ms; recentraliza ao final
+    const t = setTimeout(center, 520);
+    return () => clearTimeout(t);
+  }, [active]);
 
   return (
     <section id="selos" className="scroll-mt-20 py-24 md:py-32 bg-void border-t border-white/5 relative overflow-hidden">
@@ -49,12 +93,7 @@ export default function Selos() {
 
       <div className="mx-auto max-w-7xl px-4 md:px-8">
         <div className="reveal text-center max-w-2xl mx-auto">
-          <div className="inline-flex items-center gap-2 border border-gold/30 bg-gold/5 px-3 py-1">
-            <Star className="h-3 w-3 text-gold" />
-            <span className="font-mono text-[11px] uppercase tracking-[0.25em] text-gold font-bold">
-              Projeto Autoral Especial
-            </span>
-          </div>
+          
           <SectionTitle className="mt-4">
             Conheça meu projeto:
             <br />
@@ -67,18 +106,20 @@ export default function Selos() {
         </div>
 
         {/* Carrossel / Galeria dos Selos */}
-        <div className="mt-16 flex items-center justify-center gap-3 md:gap-6">
+        <div ref={scrollerRef} className="no-scrollbar relative mt-16 -mx-4 overflow-x-auto px-4 py-6">
+        <div className="mx-auto flex w-max items-center gap-3 md:gap-6">
           {selosList.map((selo, idx) => {
             const isActive = idx === active;
             return (
               <button
                 key={selo.id}
                 type="button"
+                data-selo
                 onClick={() => setActive(idx)}
                 aria-label={`Ver ${selo.name}`}
                 className={`relative shrink-0 transition-all duration-500 overflow-hidden border ${
                   isActive
-                    ? "w-52 sm:w-64 md:w-80 aspect-[4/5] border-gold shadow-[0_0_30px_rgba(201,158,103,0.3)] z-10 scale-105"
+                    ? "w-52 sm:w-64 md:w-80 aspect-[4/5] border-gold shadow-[0_0_30px_rgba(216,195,174,0.3)] z-10 scale-105"
                     : "w-20 sm:w-28 md:w-40 aspect-[4/5] border-white/10 opacity-50 hover:opacity-80 scale-95"
                 }`}
               >
@@ -94,6 +135,7 @@ export default function Selos() {
               </button>
             );
           })}
+        </div>
         </div>
 
         {/* Detalhe do Selo Ativo */}
@@ -111,7 +153,7 @@ export default function Selos() {
               )}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-gold px-8 py-3.5 font-mono text-xs font-bold uppercase tracking-[0.2em] text-void transition-all hover:bg-gold-hover hover:shadow-[0_0_15px_rgba(201,158,103,0.4)]"
+              className="inline-flex items-center gap-2 bg-gold px-8 py-3.5 font-mono text-xs font-bold uppercase tracking-[0.2em] text-void transition-all hover:bg-gold-hover hover:shadow-[0_0_15px_rgba(216,195,174,0.4)]"
             >
               Quero Tatuar Este Selo <Arrow className="h-4 w-4" />
             </a>

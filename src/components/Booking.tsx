@@ -197,7 +197,7 @@ export default function Booking() {
 
               <button
                 type="submit"
-                className="mt-2 flex items-center justify-center gap-3 bg-gold px-8 py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-void transition-all hover:bg-gold-hover hover:shadow-[0_0_20px_rgba(201,158,103,0.4)]"
+                className="mt-2 flex items-center justify-center gap-3 bg-gold px-8 py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-void transition-all hover:bg-gold-hover hover:shadow-[0_0_20px_rgba(216,195,174,0.4)]"
               >
                 Enviar via WhatsApp <Arrow className="h-4 w-4" />
               </button>

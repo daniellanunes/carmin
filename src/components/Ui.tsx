@@ -49,9 +49,9 @@ export function SectionTitle({ children, className = "" }: { children: ReactNode
 }
 
 const tones = {
-  dark: "bg-[radial-gradient(circle_at_30%_25%,#3a3a3f_0%,#121214_75%)]",
-  warm: "bg-[radial-gradient(circle_at_60%_30%,#5b2a35_0%,#141012_75%)]",
-  light: "bg-[radial-gradient(circle_at_50%_40%,#d9d6d2_0%,#8f8b88_85%)]",
+  dark: "bg-[radial-gradient(circle_at_30%_25%,#3a2e2a_0%,#1b1718_75%)]",
+  warm: "bg-[radial-gradient(circle_at_60%_30%,#5d3a26_0%,#1b1718_75%)]",
+  light: "bg-[radial-gradient(circle_at_50%_40%,#eee0d3_0%,#a8998a_85%)]",
 };
 
 type TileProps = {
@@ -78,7 +78,7 @@ export function Tile({ alt, art: Art, tone = "dark", ink = "text-carmim/80", cla
 export function Slashes({ className = "" }: { className?: string }) {
   return (
     <svg viewBox="0 0 400 400" preserveAspectRatio="none" className={`pointer-events-none absolute ${className}`} aria-hidden>
-      <path d="M0 80L400 0M0 400L400 120M120 400L400 260" stroke="#e0144c" strokeOpacity="0.45" strokeWidth="1" vectorEffect="non-scaling-stroke" />
+      <path d="M0 80L400 0M0 400L400 120M120 400L400 260" stroke="#d8c3ae" strokeOpacity="0.45" strokeWidth="1" vectorEffect="non-scaling-stroke" />
     </svg>
   );
 }

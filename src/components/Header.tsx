@@ -18,12 +18,12 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-void/90 backdrop-blur-md">
-      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 md:px-8">
-        <a href="#topo" aria-label="TomCash Tattoo — início" onClick={() => setOpen(false)}>
+      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-2 px-4 md:px-8">
+        <a href="#topo" aria-label="TomCash Tattoo — início" className="flex min-w-0 shrink lg:mr-6 lg:shrink-0" onClick={() => setOpen(false)}>
           <Logo />
         </a>
 
-        <nav className="hidden items-center gap-7 lg:flex">
+        <nav className="hidden items-center gap-4 lg:flex xl:gap-7">
           {links.map((l) => (
             <a
               key={l.href}
@@ -35,12 +35,12 @@ export default function Header() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-3">
+        <div className="flex shrink-0 items-center gap-2 sm:gap-3">
           <a
             href="https://wa.me/5571989331091?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20or%C3%A7amento!"
             target="_blank"
             rel="noopener noreferrer"
-            className="border border-gold px-4 py-2 font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-gold transition-all hover:bg-gold hover:text-void"
+            className="border border-gold px-2.5 py-2 font-mono text-[10px] font-bold uppercase tracking-[0.12em] text-gold transition-all hover:bg-gold hover:text-void sm:px-4 sm:text-[11px] sm:tracking-[0.2em]"
           >
             Orçamento
           </a>

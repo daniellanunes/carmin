@@ -29,8 +29,8 @@ const footerLinks = [
     items: [
       { label: "Barra Center - Sala 106", href: "#localizacao" },
       { label: "Salvador · Bahia", href: "#localizacao" },
-      { label: "(71) 98933-1091", href: "https://wa.me/5571989331091" },
-      { label: "(74) 98861-0287", href: "https://wa.me/5574988610287" },
+      { label: "(71) 99721-7043", href: "https://wa.me/5571997217043" },
+      { label: "(71) 99911-4505", href: "https://wa.me/5571999114505" },
     ],
   },
 ];

@@ -5,19 +5,19 @@ import { Arrow, SectionTitle, Star } from "./Ui";
 
 const studioPhotos = [
   {
-    src: "/assets/IMG_4866-pfgN8ksh.webp",
-    alt: "Salvador Tattoo Studio - Espaço de atendimento",
-    caption: "Bancadas e equipamentos de nível cirúrgico",
+    src: "/assets/estudio/estudio-janela.webp",
+    alt: "Salvador Tattoo Studio - Macas de atendimento com vista para o mar",
+    caption: "Iluminação natural e vista para o mar",
   },
   {
-    src: "/assets/IMG_4872-Bg8Wb1Af.webp",
-    alt: "Salvador Tattoo Studio - Vista para o Farol da Barra",
-    caption: "Iluminação natural e vista privilegiada para o mar",
+    src: "/assets/estudio/estudio-maca.webp",
+    alt: "Salvador Tattoo Studio - Sala de atendimento com painel de madeira",
+    caption: "Ambiente climatizado e acolhedor",
   },
   {
-    src: "/assets/IMG_4875-DY9SpWJU.webp",
-    alt: "Salvador Tattoo Studio - Conforto e acolhimento",
-    caption: "Ambiente climatizado projetado para o seu bem-estar",
+    src: "/assets/estudio/estudio-pintura.webp",
+    alt: "Tom pintando um quadro no estúdio",
+    caption: "Espaço também para criar e pintar",
   },
 ];
 
@@ -55,7 +55,7 @@ export default function Studio() {
               <p className="text-fog">CEP 40140-080</p>
             </div>
 
-            <div className="mt-8 flex items-center gap-3">
+            <div className="mt-8 flex flex-wrap items-center gap-2 sm:gap-3">
               <span className="inline-flex items-center gap-1.5 border border-gold/40 bg-gold/10 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-gold">
                 <Star className="h-2.5 w-2.5" /> Climatizado
               </span>
@@ -69,8 +69,8 @@ export default function Studio() {
           </div>
 
           {/* Grid de Fotos do Estúdio */}
-          <div className="reveal space-y-4">
-            <div className="relative aspect-[16/10] overflow-hidden border border-gold/40 shadow-xl group">
+          <div className="reveal grid aspect-[6/5] grid-cols-2 grid-rows-2 gap-4">
+            <div className="relative row-span-2 overflow-hidden border border-gold/40 shadow-xl group">
               <Image
                 src={studioPhotos[0].src}
                 alt={studioPhotos[0].alt}
@@ -83,9 +83,8 @@ export default function Studio() {
               </p>
             </div>
 
-            <div className="grid grid-cols-2 gap-4">
-              {studioPhotos.slice(1).map((photo) => (
-                <div key={photo.src} className="relative aspect-[4/3] overflow-hidden border border-white/10 group">
+            {studioPhotos.slice(1).map((photo) => (
+                <div key={photo.src} className="relative overflow-hidden border border-white/10 group">
                   <Image
                     src={photo.src}
                     alt={photo.alt}
@@ -97,8 +96,7 @@ export default function Studio() {
                     {photo.caption}
                   </p>
                 </div>
-              ))}
-            </div>
+            ))}
           </div>
         </div>
       </div>

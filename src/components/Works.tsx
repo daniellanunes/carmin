@@ -17,17 +17,63 @@ const worksData = [
   { id: 10, title: "Traço Firme & Bold", category: "Blackwork", src: "/assets/IMG_11-Day_5IZq.webp" },
   { id: 11, title: "Composição em Camadas", category: "Artístico", src: "/assets/IMG_12-Dxsfue5w.webp" },
   { id: 12, title: "Fechamento Detalhado", category: "Autoral", src: "/assets/IMG_13-D1n2Y5nI.webp" },
+  ...(
+    [
+      ["Pescoço & Lettering", "Blackwork"],
+      ["Punhal Ghostface", "Blackwork"],
+      ["Polvo Realista", "Artístico"],
+      ["Peônias nas Costas", "Colorido"],
+      ["Vitral Gótico", "Blackwork"],
+      ["Corações Gêmeos", "Fine line"],
+      ["Composição no Peitoral", "Artístico"],
+      ["Girassóis de Van Gogh", "Colorido"],
+      ["Olhar em Traço Livre", "Blackwork"],
+      ["Fechamento de Mão", "Blackwork"],
+      ["Santa & Ouro", "Artístico"],
+      ["Tucano Tropical", "Artístico"],
+      ["Abelha & Flores", "Colorido"],
+      ["Olhar Rinnegan", "Blackwork"],
+      ["Olhar Anime", "Fine line"],
+      ["Peixe em Aquarela", "Colorido"],
+      ["Navio em Traço Fino", "Fine line"],
+      ["Fluxo em Preto", "Blackwork"],
+      ["Chamas em Blackwork", "Blackwork"],
+      ["Mago & Cajado", "Colorido"],
+      ["Cosmos & Floresta", "Fine line"],
+      ["Sr. Cabeça de Batata", "Colorido"],
+      ["Cavalo-Marinho", "Artístico"],
+      ["Anime em Aquarela", "Colorido"],
+      ["Composição Delicada", "Fine line"],
+      ["Polvo & Âncora", "Blackwork"],
+      ["Retrato Feminino", "Artístico"],
+      ["Asas no Peito", "Blackwork"],
+      ["Sombras Escuras", "Artístico"],
+      ["Asas Realistas", "Artístico"],
+      ["Retrato Psicodélico", "Autoral"],
+      ["Floral nas Costas", "Fine line"],
+      ["Pantera", "Blackwork"],
+    ] as const
+  ).map(([title, category], i) => ({
+    id: 13 + i,
+    title,
+    category,
+    src: `/assets/galeria/tattoo-${String(i + 1).padStart(2, "0")}.webp`,
+  })),
 ];
+
+const PAGE_SIZE = 12;
 
 const categories = ["Todas", "Autoral", "Blackwork", "Fine line", "Artístico", "Colorido"] as const;
 
 export default function Works() {
   const [selectedCategory, setSelectedCategory] = useState<string>("Todas");
   const [lightboxImage, setLightboxImage] = useState<string | null>(null);
+  const [visible, setVisible] = useState(PAGE_SIZE);
 
   const filtered = selectedCategory === "Todas"
     ? worksData
     : worksData.filter((w) => w.category === selectedCategory);
+  const shown = filtered.slice(0, visible);
 
   return (
     <section id="galeria" className="scroll-mt-20 py-24 md:py-32 bg-coal border-t border-white/5">
@@ -52,7 +98,10 @@ export default function Works() {
               <button
                 key={cat}
                 type="button"
-                onClick={() => setSelectedCategory(cat)}
+                onClick={() => {
+                  setSelectedCategory(cat);
+                  setVisible(PAGE_SIZE);
+                }}
                 aria-pressed={selectedCategory === cat}
                 className={`border px-4 py-2 font-mono text-[11px] uppercase tracking-[0.15em] transition-all ${
                   selectedCategory === cat
@@ -68,16 +117,17 @@ export default function Works() {
 
         {/* Grid de Trabalhos */}
         <ul className="mt-14 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
-          {filtered.map((item) => (
+          {shown.map((item) => (
             <li key={item.id} className="group">
               <div
                 onClick={() => setLightboxImage(item.src)}
-                className="cursor-pointer relative aspect-[3/4] overflow-hidden border border-white/10 bg-void transition-all duration-300 group-hover:border-gold group-hover:shadow-[0_10px_30px_rgba(201,158,103,0.2)]"
+                className="cursor-pointer relative aspect-[3/4] overflow-hidden border border-white/10 bg-void transition-all duration-300 group-hover:border-gold group-hover:shadow-[0_10px_30px_rgba(216,195,174,0.2)]"
               >
                 <Image
                   src={item.src}
                   alt={item.title}
                   fill
+                  sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-108"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-void via-void/30 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
@@ -98,6 +148,18 @@ export default function Works() {
             </li>
           ))}
         </ul>
+
+        {filtered.length > visible && (
+          <div className="mt-8 text-center">
+            <button
+              type="button"
+              onClick={() => setVisible((v) => v + PAGE_SIZE)}
+              className="border border-white/15 px-6 py-3 font-mono text-[11px] uppercase tracking-[0.15em] text-bone/80 transition-all hover:border-gold hover:text-gold"
+            >
+              Ver mais trabalhos ({filtered.length - visible})
+            </button>
+          </div>
+        )}
 
         <div className="mt-12 text-center">
           <p className="font-mono text-xs uppercase tracking-[0.2em] text-fog">

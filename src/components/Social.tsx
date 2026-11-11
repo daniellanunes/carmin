@@ -29,9 +29,9 @@ const socials = [
   },
   {
     name: "WhatsApp Atendimento",
-    user: "(71) 98933-1091",
+    user: "(71) 99911-4505",
     desc: "Canal oficial para orçamentos rápidos e dúvidas.",
-    href: "https://wa.me/5571989331091?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20or%C3%A7amento!",
+    href: "https://wa.me/5571999114505?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20or%C3%A7amento!",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-6 w-6">
         <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
@@ -40,9 +40,9 @@ const socials = [
   },
   {
     name: "WhatsApp Direto Artista",
-    user: "(74) 98861-0287",
+    user: "(71) 99721-7043",
     desc: "Contato direto com Tom para alinhamentos artísticos.",
-    href: "https://wa.me/5574988610287",
+    href: "https://wa.me/5571997217043",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-6 w-6">
         <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
@@ -77,7 +77,7 @@ export default function Social() {
               href={s.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="group border border-white/10 bg-void p-6 transition-all duration-300 hover:border-gold hover:-translate-y-1 hover:shadow-[0_10px_25px_rgba(201,158,103,0.15)]"
+              className="group border border-white/10 bg-void p-6 transition-all duration-300 hover:border-gold hover:-translate-y-1 hover:shadow-[0_10px_25px_rgba(216,195,174,0.15)]"
             >
               <div className="flex items-center justify-between">
                 <span className="grid h-12 w-12 place-items-center rounded-lg border border-gold/30 bg-gold/10 text-gold transition-colors group-hover:bg-gold group-hover:text-void">

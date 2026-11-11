@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-void: #0d0d0e;
-  --color-coal: #151517;
-  --color-slate: #202023;
-  --color-bone: #f5f3ef;
-  --color-fog: #9a968f;
-  --color-gold: #c99e67;
-  --color-gold-hover: #dfb987;
-  --color-gold-deep: #856133;
-  --color-carmim: #c99e67;
-  --color-carmim-deep: #856133;
+  --color-void: #1b1718;
+  --color-coal: #231d1d;
+  --color-slate: #2e2524;
+  --color-bone: #f4eee2;
+  --color-fog: #a8998a;
+  --color-gold: #d8c3ae;
+  --color-gold-hover: #eee0d3;
+  --color-gold-deep: #5d3a26;
+  --color-carmim: #d8c3ae;
+  --color-carmim-deep: #5d3a26;
   --font-sans: var(--font-inter);
   --font-serif: var(--font-lora);
   --font-display: var(--font-lora);
@@ -21,6 +21,14 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Nunca deixar a página rolar na horizontal (iOS/Safari incluso).
+   "clip" em vez de "hidden" para não quebrar o header sticky. */
+html,
+body {
+  overflow-x: clip;
+  max-width: 100%;
+}
+
 body {
   background: var(--color-void);
   color: var(--color-bone);
@@ -29,19 +37,19 @@ body {
 
 ::selection {
   background: var(--color-gold);
-  color: #0d0d0e;
+  color: #1b1718;
 }
 
 .text-gold {
-  color: #c99e67;
+  color: #d8c3ae;
 }
 
 .bg-gold {
-  background-color: #c99e67;
+  background-color: #d8c3ae;
 }
 
 .border-gold {
-  border-color: #c99e67;
+  border-color: #d8c3ae;
 }
 
 /* Granulado por cima dos placeholders de foto */
@@ -57,7 +65,7 @@ body {
 
 .text-outline {
   color: transparent;
-  -webkit-text-stroke: 1px rgb(201 158 103 / 0.15);
+  -webkit-text-stroke: 1px rgb(216 195 174 / 0.15);
 }
 
 @keyframes spin-slow {

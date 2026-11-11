@@ -62,7 +62,7 @@ export default function Styles() {
           {stylesList.map((item) => (
             <div
               key={item.name}
-              className="group relative overflow-hidden border border-white/10 bg-coal transition-all duration-300 hover:border-gold hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(201,158,103,0.15)]"
+              className="group relative overflow-hidden border border-white/10 bg-coal transition-all duration-300 hover:border-gold hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(216,195,174,0.15)]"
             >
               <div className="relative aspect-[3/4] w-full overflow-hidden">
                 <Image

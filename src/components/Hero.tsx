@@ -73,7 +73,7 @@ export default function Hero() {
             </span>
           </div>
 
-          <h1 className="mt-6 font-serif text-[clamp(2.8rem,7.5vw,6rem)] font-bold uppercase leading-[0.95] text-bone drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
+          <h1 className="mt-6 font-serif text-[clamp(2.25rem,calc(7.5vw+0.8rem),6rem)] font-bold uppercase leading-[0.95] text-bone drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
             Arte autoral,
             <br />
             <span className="text-gold italic font-normal">técnica refinada</span>
@@ -92,7 +92,7 @@ export default function Hero() {
               href="https://wa.me/5571989331091?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20or%C3%A7amento!"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-gold px-8 py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-void transition-all hover:bg-gold-hover hover:shadow-[0_0_20px_rgba(201,158,103,0.4)]"
+              className="flex items-center gap-2 bg-gold px-8 py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-void transition-all hover:bg-gold-hover hover:shadow-[0_0_20px_rgba(216,195,174,0.4)]"
             >
               Fazer Orçamento <Arrow className="h-4 w-4" />
             </a>
