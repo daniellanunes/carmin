@@ -35,6 +35,16 @@ export default function Header() {
           ))}
         </nav>
 
+        <button
+          type="button"
+          aria-label={open ? "Fechar menu" : "Abrir menu"}
+          aria-expanded={open}
+          onClick={() => setOpen((v) => !v)}
+          className="flex h-9 w-9 shrink-0 flex-col items-center justify-center gap-1.5 lg:hidden text-bone"
+        >
+          <span className={`h-0.5 w-6 bg-gold transition-transform duration-300 ${open ? "translate-y-[4px] rotate-45" : ""}`} />
+          <span className={`h-0.5 w-6 bg-gold transition-transform duration-300 ${open ? "-translate-y-[4px] -rotate-45" : ""}`} />
+        </button>
       </div>
 
       {open && (
@@ -49,18 +59,7 @@ export default function Header() {
               <span className="font-mono text-xs text-gold">0{i + 1}</span>
               {l.label}
             </a>
-          ))}
-          <div className="mt-4 pt-2">
-            <a
-              href="https://wa.me/5571989331091?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20or%C3%A7amento!"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block w-full text-center bg-gold py-3 font-mono text-xs font-bold uppercase tracking-[0.2em] text-void"
-              onClick={() => setOpen(false)}
-            >
-              Falar no WhatsApp
-            </a>
-          </div>
+          ))}          
         </nav>
       )}
     </header>
