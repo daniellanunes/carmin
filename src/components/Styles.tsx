@@ -93,7 +93,7 @@ export default function Styles() {
             </p>
           </div>
           <a
-            href="https://wa.me/5571989331091?text=Ol%C3%A1%2C%20tenho%20uma%20ideia%20para%20uma%20tatuagem%20e%20gostaria%20de%20conversar!"
+            href="https://wa.me/5571999114505?text=Ol%C3%A1%2C%20tenho%20uma%20ideia%20para%20uma%20tatuagem%20e%20gostaria%20de%20conversar!"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-4 sm:mt-0 shrink-0 inline-flex items-center gap-2 font-mono text-xs font-bold uppercase tracking-[0.2em] text-gold hover:underline"

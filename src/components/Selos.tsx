@@ -148,7 +148,7 @@ export default function Selos() {
           </p>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
             <a
-              href={`https://wa.me/5571989331091?text=${encodeURIComponent(
+              href={`https://wa.me/5571999114505?text=${encodeURIComponent(
                 `Olá Tom! Adorei o projeto "Os Selos" e gostaria de tatuar o ${current.name} (${current.theme})!`
               )}`}
               target="_blank"

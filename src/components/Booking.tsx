@@ -27,7 +27,7 @@ export default function Booking() {
 - *Descrição da Ideia:* ${formData.ideia}`;
 
     const encoded = encodeURIComponent(textMsg);
-    window.open(`https://wa.me/5571989331091?text=${encoded}`, "_blank");
+    window.open(`https://wa.me/5571999114505?text=${encoded}`, "_blank");
   };
 
   return (

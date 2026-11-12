@@ -126,7 +126,7 @@ export default function Hero() {
       <div className="absolute bottom-10 right-4 hidden w-56 flex-col gap-3 md:right-8 lg:flex">
         <div className="grid grid-cols-2 gap-2.5">
           <a
-            href="https://wa.me/5571989331091?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20or%C3%A7amento!"
+            href="https://wa.me/5571999114505?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20or%C3%A7amento!"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="WhatsApp TomCash Tattoo"
