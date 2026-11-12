@@ -14,8 +14,8 @@ const heroSlides = [
     alt: "Arte e processo de tatuagem",
   },
   {
-    src: "/assets/IMGselo_5-Czqo08KH.webp",
-    alt: "Projeto Os Selos por TomCash",
+    src: "/assets/IMG_6-tTrvDqcq.webp",
+    alt: "Tatuagem autoral ornamental TomCash Tattoo",
   },
 ];
 
@@ -30,7 +30,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="topo" className="relative isolate min-h-[calc(100svh-5rem)] overflow-hidden flex items-center">
+    <section id="topo" className="relative isolate min-h-[100svh] pt-20 overflow-hidden flex items-center">
       {/* Slideshow de fundo com fotos reais do TomCash com iluminação nítida */}
       <div className="absolute inset-0 -z-20">
         {heroSlides.map((slide, index) => (
@@ -116,36 +116,67 @@ export default function Hero() {
               />
             ))}
             <span className="ml-3 font-mono text-[10px] uppercase tracking-[0.2em] text-fog">
-              Barra Center · Salvador - BA
+              Salvador Tattoo Studio · Salvador - BA
             </span>
           </div>
         </div>
       </div>
 
-      {/* Card Flutuante com Destaque de Projeto */}
-      <a
-        href="#selos"
-        className="group absolute bottom-10 right-4 hidden w-56 border border-gold/30 bg-void/80 p-3.5 backdrop-blur-md transition-all hover:border-gold md:right-8 lg:block"
-      >
-        <div className="flex items-center justify-between text-gold">
-          <span className="font-mono text-[10px] uppercase tracking-[0.2em]">Projeto Autoral</span>
-          <Star className="h-3 w-3" />
+      {/* WhatsApp & Instagram + Card Flutuante "Os Selos" */}
+      <div className="absolute bottom-10 right-4 hidden w-56 flex-col gap-3 md:right-8 lg:flex">
+        <div className="grid grid-cols-2 gap-2.5">
+          <a
+            href="https://wa.me/5571989331091?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20or%C3%A7amento!"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp TomCash Tattoo"
+            className="flex items-center justify-center gap-2 border border-gold/40 bg-void/80 py-2.5 font-mono text-[10px] font-bold uppercase tracking-wider text-gold backdrop-blur-md transition-all hover:border-gold hover:bg-gold hover:text-void"
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-4 w-4 shrink-0" aria-hidden>
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+            </svg>
+            WhatsApp
+          </a>
+          <a
+            href="https://www.instagram.com/tomcashtattoo/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram TomCash Tattoo"
+            className="flex items-center justify-center gap-2 border border-gold/40 bg-void/80 py-2.5 font-mono text-[10px] font-bold uppercase tracking-wider text-gold backdrop-blur-md transition-all hover:border-gold hover:bg-gold hover:text-void"
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-4 w-4 shrink-0" aria-hidden>
+              <rect x="2" y="2" width="20" height="20" rx="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+            </svg>
+            Instagram
+          </a>
         </div>
-        <p className="mt-1 font-serif text-lg font-bold text-bone group-hover:text-gold transition-colors">
-          Os Selos
-        </p>
-        <p className="mt-1 text-[11px] leading-tight text-bone/60">
-          Tatuar memórias e obras em formato de selos postais.
-        </p>
-        <div className="relative mt-3 aspect-square overflow-hidden border border-white/10">
-          <Image
-            src="/assets/IMGselo_5-Czqo08KH.webp"
-            alt="Selo TomCash"
-            fill
-            className="object-cover transition-transform duration-500 group-hover:scale-110"
-          />
-        </div>
-      </a>
+
+        <a
+          href="#selos"
+          className="group block w-full border border-gold/30 bg-void/80 p-3.5 backdrop-blur-md transition-all hover:border-gold"
+        >
+          <div className="flex items-center justify-between text-gold">
+            <span className="font-mono text-[10px] uppercase tracking-[0.2em]">Projeto Autoral</span>
+            <Star className="h-3 w-3" />
+          </div>
+          <p className="mt-1 font-serif text-lg font-bold text-bone group-hover:text-gold transition-colors">
+            Os Selos
+          </p>
+          <p className="mt-1 text-[11px] leading-tight text-bone/60">
+            Tatuar memórias e obras em formato de selos postais.
+          </p>
+          <div className="relative mt-3 aspect-square overflow-hidden border border-white/10">
+            <Image
+              src="/assets/selos/selo-farol.webp"
+              alt="Selo da Barra - TomCash Tattoo"
+              fill
+              className="object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+          </div>
+        </a>
+      </div>
     </section>
   );
 }

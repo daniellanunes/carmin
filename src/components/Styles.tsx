@@ -88,7 +88,6 @@ export default function Styles() {
         {/* Banner de convite */}
         <div className="mt-12 flex flex-col sm:flex-row items-center justify-between border border-gold/30 bg-gold/5 p-6 md:p-8 backdrop-blur">
           <div className="flex items-center gap-4">
-            <Star className="h-6 w-6 text-gold shrink-0" />
             <p className="text-sm md:text-base text-bone font-medium">
               Tem uma ideia diferente ou quer misturar estilos? Desenvolvemos um projeto 100% autoral para você.
             </p>

@@ -1,11 +1,12 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-void: #1b1718;
-  --color-coal: #231d1d;
-  --color-slate: #2e2524;
+  --color-void: #241913;
+  --color-coal: #36251b;
+  --color-slate: #4d3527;
+  --color-brown: #593e28;
   --color-bone: #f4eee2;
-  --color-fog: #a8998a;
+  --color-fog: #bfa995;
   --color-gold: #d8c3ae;
   --color-gold-hover: #eee0d3;
   --color-gold-deep: #5d3a26;

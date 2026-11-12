@@ -67,17 +67,17 @@ export default function Manifesto() {
             </div>
           </div>
 
-          {/* Coluna Fotos do Artista (Airton / Tom) */}
-          <div className="reveal space-y-6">
-            <div className="relative aspect-[4/5] overflow-hidden border border-gold/40 shadow-2xl">
+          {/* Coluna Foto Única do Artista (Airton / Tom) pintando */}
+          <div className="reveal">
+            <div className="relative aspect-[3/4] overflow-hidden border border-gold/40 shadow-2xl">
               <Image
-                src="/assets/airton1-BB91Tj_f.webp"
-                alt="Tom Cash - Tatuador e Artista"
+                src="/assets/estudio/estudio-pintura.webp"
+                alt="Tom Cash pintando no estúdio"
                 fill
-                className="object-cover object-top hover:scale-105 transition-transform duration-700"
+                className="object-cover object-center hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-void/90 via-transparent to-transparent" />
-              <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between">
+              <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between">
                 <div>
                   <p className="font-serif text-2xl font-bold uppercase text-bone">Airton (Tom)</p>
                   <p className="font-mono text-xs uppercase tracking-widest text-gold">Tatuador &amp; Fundador</p>
@@ -85,24 +85,6 @@ export default function Manifesto() {
                 <div className="border border-gold/60 bg-void/80 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-gold">
                   Salvador · BA
                 </div>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-2 gap-4">
-              <div className="relative aspect-[4/3] overflow-hidden border border-white/10">
-                <Image
-                  src="/assets/airton2-KCv7lYBx.webp"
-                  alt="Processo Criativo de Tom Cash"
-                  fill
-                  className="object-cover hover:scale-110 transition-transform duration-500"
-                />
-              </div>
-              <div className="flex flex-col justify-center border border-white/10 bg-slate/40 p-4">
-                <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-fog">Experiência</p>
-                <p className="mt-1 font-serif text-xl font-bold text-gold">Segurança &amp; Conforto</p>
-                <p className="mt-2 text-xs leading-relaxed text-bone/70">
-                  Estrutura profissional de alto padrão no Salvador Barra Center com vista para o mar.
-                </p>
               </div>
             </div>
           </div>
