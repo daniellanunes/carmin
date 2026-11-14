@@ -1,7 +1,6 @@
 "use client";
 
 import Logo from "./Logo";
-import { Arrow, Star } from "./Ui";
 
 const footerLinks = [
   {
@@ -27,7 +26,7 @@ const footerLinks = [
   {
     title: "Atendimento",
     items: [
-      { label: "Barra Center - Sala 106", href: "#localizacao" },
+      { label: "Barra Center - Sala 211", href: "#localizacao" },
       { label: "Salvador · Bahia", href: "#localizacao" },
       { label: "(71) 99721-7043", href: "https://wa.me/5571997217043" },
       { label: "(71) 99911-4505", href: "https://wa.me/5571999114505" },
@@ -37,7 +36,7 @@ const footerLinks = [
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden border-t border-white/10 bg-void pt-20 pb-10">
+    <footer className="relative overflow-hidden border-t border-white/10 bg-coal pt-20 pb-10">
       <div className="relative mx-auto max-w-7xl px-4 md:px-8">
         <div className="grid gap-12 lg:grid-cols-[1.4fr_2.6fr] items-start">
           <div>
@@ -52,8 +51,8 @@ export default function Footer() {
           <div className="grid grid-cols-2 gap-8 sm:grid-cols-3">
             {footerLinks.map((col) => (
               <div key={col.title}>
-                <p className="flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.2em] text-gold font-bold">
-                  <Star className="h-2.5 w-2.5" /> {col.title}
+                <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-gold font-bold">
+                  {col.title}
                 </p>
                 <ul className="mt-4 space-y-2.5 text-xs text-bone/70 font-mono">
                   {col.items.map((item) => (

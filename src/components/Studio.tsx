@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { Arrow, SectionTitle, Star } from "./Ui";
+import { Arrow, SectionTitle } from "./Ui";
 
 const studioPhotos = [
   {
@@ -32,12 +32,12 @@ export default function Studio() {
   };
 
   return (
-    <section id="estudio" className="scroll-mt-20 py-24 md:py-32 bg-coal border-t border-white/5">
+    <section id="estudio" className="scroll-mt-20 py-24 md:py-32 bg-void border-t border-white/5">
       <div className="mx-auto max-w-7xl px-4 md:px-8">
         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.3fr] lg:gap-14 items-center">
           <div className="reveal">
             <span className="font-mono text-xs uppercase tracking-[0.25em] text-gold font-bold">
-              04 — O Espaço
+              05 — O Espaço
             </span>
             <SectionTitle className="mt-3">
               Salvador Tattoo
@@ -60,19 +60,19 @@ export default function Studio() {
             <div className="mt-8 border-l-2 border-gold pl-4 font-mono text-xs text-bone/80">
               <p className="text-gold font-bold uppercase tracking-wider">Localização:</p>
               <p className="mt-1">Centro Comercial Barra Center</p>
-              <p>Av. Oceânica, 551 - sala 106 - Barra, Salvador - BA</p>
+              <p>Av. Oceânica, 551 - sala 211 - Barra, Salvador - BA</p>
               <p className="text-fog">CEP 40140-080</p>
             </div>
 
             <div className="mt-6 flex flex-wrap items-center gap-2 sm:gap-3">
-              <span className="inline-flex items-center gap-1.5 border border-gold/40 bg-gold/10 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-gold">
-                <Star className="h-2.5 w-2.5" /> Climatizado
+              <span className="inline-flex items-center border border-gold/40 bg-gold/10 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-gold">
+                Climatizado
               </span>
-              <span className="inline-flex items-center gap-1.5 border border-gold/40 bg-gold/10 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-gold">
-                <Star className="h-2.5 w-2.5" /> Vista para o Mar
+              <span className="inline-flex items-center border border-gold/40 bg-gold/10 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-gold">
+                Vista para o Mar
               </span>
-              <span className="inline-flex items-center gap-1.5 border border-gold/40 bg-gold/10 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-gold">
-                <Star className="h-2.5 w-2.5" /> Biossegurança
+              <span className="inline-flex items-center border border-gold/40 bg-gold/10 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-gold">
+                Biossegurança
               </span>
             </div>
 

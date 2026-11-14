@@ -24,7 +24,7 @@ export default function Logo({ size = "sm" }: { size?: "sm" | "lg" }) {
             big ? "mt-1 text-[11px] tracking-[0.35em]" : "mt-0.5 text-[8px] tracking-[0.3em]"
           }`}
         >
-          Tattoo <span className="text-gold">✦</span> Salvador
+          Tattoo <span className="text-gold">·</span> Salvador
         </span>
       </span>
     </span>

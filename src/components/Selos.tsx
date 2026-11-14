@@ -86,7 +86,7 @@ export default function Selos() {
   }, [active]);
 
   return (
-    <section id="selos" className="scroll-mt-20 py-24 md:py-32 bg-void border-t border-white/5 relative overflow-hidden">
+    <section id="selos" className="scroll-mt-20 py-24 md:py-32 bg-coal border-t border-white/5 relative overflow-hidden">
       {/* Detalhes de background */}
       <div className="absolute -left-20 top-20 -z-10 h-72 w-72 rounded-full bg-gold/5 blur-3xl pointer-events-none" />
       <div className="absolute -right-20 bottom-20 -z-10 h-72 w-72 rounded-full bg-gold/5 blur-3xl pointer-events-none" />

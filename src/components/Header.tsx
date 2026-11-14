@@ -5,6 +5,7 @@ import Logo from "./Logo";
 
 const links = [
   { href: "#sobre", label: "Sobre" },
+  { href: "#servicos", label: "Serviços" },
   { href: "#estilos", label: "Estilos" },
   { href: "#galeria", label: "Galeria" },
   { href: "#selos", label: "Os Selos" },
@@ -37,12 +38,12 @@ export default function Header() {
           <Logo />
         </a>
 
-        <nav className="hidden items-center gap-4 lg:flex xl:gap-7">
+        <nav className="hidden items-center gap-4 lg:flex lg:gap-5 xl:gap-7">
           {links.map((l) => (
             <a
               key={l.href}
               href={l.href}
-              className="font-mono text-[11px] uppercase tracking-[0.2em] text-bone/70 transition-colors hover:text-gold"
+              className="whitespace-nowrap font-mono text-xs xl:text-[13px] font-medium uppercase tracking-[0.16em] text-bone/90 drop-shadow-[0_1px_4px_rgba(0,0,0,0.75)] transition-colors hover:text-gold"
             >
               {l.label}
             </a>

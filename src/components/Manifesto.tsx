@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { SectionTitle, Star } from "./Ui";
+import { SectionTitle } from "./Ui";
 
 const techniques = [
   {
@@ -57,8 +57,7 @@ export default function Manifesto() {
             <div className="mt-10 grid gap-4 sm:grid-cols-2">
               {techniques.map((t) => (
                 <div key={t.title} className="border border-white/10 bg-void/50 p-4">
-                  <p className="flex items-center gap-2 font-mono text-xs font-bold uppercase tracking-wider text-gold">
-                    <Star className="h-3 w-3 shrink-0" />
+                  <p className="font-mono text-xs font-bold uppercase tracking-wider text-gold">
                     {t.title}
                   </p>
                   <p className="mt-2 text-xs leading-relaxed text-bone/70">{t.desc}</p>

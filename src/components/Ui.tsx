@@ -28,20 +28,20 @@ export function Arrow({ className }: IconProps) {
   );
 }
 
-/** Rótulo pequeno em fonte mono, com traço magenta. */
+/** Rótulo pequeno em fonte mono, com traço dourado. */
 export function Label({ children, className = "" }: { children: ReactNode; className?: string }) {
   return (
-    <p className={`flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.2em] text-fog ${className}`}>
+    <p className={`flex items-center gap-3 font-mono text-xs uppercase tracking-[0.2em] text-fog ${className}`}>
       <span className="h-px w-6 bg-carmim" />
       {children}
     </p>
   );
 }
 
-/** Título de seção com barra vertical magenta, como no modelo. */
+/** Título de seção com barra vertical dourada, como no modelo. */
 export function SectionTitle({ children, className = "" }: { children: ReactNode; className?: string }) {
   return (
-    <h2 className={`flex gap-4 font-display text-4xl uppercase leading-[0.95] md:text-5xl ${className}`}>
+    <h2 className={`flex gap-3 sm:gap-4 font-display text-3xl sm:text-4xl lg:text-5xl uppercase leading-[0.98] ${className}`}>
       <span className="mt-1 w-1 shrink-0 bg-carmim" />
       <span>{children}</span>
     </h2>

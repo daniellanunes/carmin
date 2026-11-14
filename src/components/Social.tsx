@@ -53,11 +53,11 @@ const socials = [
 
 export default function Social() {
   return (
-    <section id="localizacao" className="scroll-mt-20 py-24 md:py-32 bg-coal border-t border-white/5">
+    <section id="localizacao" className="scroll-mt-20 py-24 md:py-32 bg-void border-t border-white/5">
       <div className="mx-auto max-w-7xl px-4 md:px-8">
         <div className="reveal max-w-2xl">
           <span className="font-mono text-xs uppercase tracking-[0.25em] text-gold font-bold">
-            06 — Onde Me Encontrar
+            07 — Onde Me Encontrar
           </span>
           <SectionTitle className="mt-3">
             Localização &amp;
@@ -77,7 +77,7 @@ export default function Social() {
               href={s.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="group border border-white/10 bg-void p-6 transition-all duration-300 hover:border-gold hover:-translate-y-1 hover:shadow-[0_10px_25px_rgba(216,195,174,0.15)]"
+              className="group border border-white/10 bg-coal p-6 transition-all duration-300 hover:border-gold hover:-translate-y-1 hover:shadow-[0_10px_25px_rgba(216,195,174,0.15)]"
             >
               <div className="flex items-center justify-between">
                 <span className="grid h-12 w-12 place-items-center rounded-lg border border-gold/30 bg-gold/10 text-gold transition-colors group-hover:bg-gold group-hover:text-void">
@@ -113,17 +113,16 @@ export default function Social() {
           </div>
 
           {/* Card Endereço e Horários */}
-          <div className="flex flex-col justify-between border border-gold/30 bg-void p-6 md:p-8">
+          <div className="flex flex-col justify-between border border-gold/30 bg-coal p-6 md:p-8">
             <div>
               <div className="flex items-center gap-2 text-gold">
-                <Star className="h-4 w-4" />
                 <span className="font-mono text-xs uppercase tracking-widest font-bold">Endereço</span>
               </div>
               <p className="mt-3 font-serif text-xl font-bold text-bone">
                 Centro Comercial Barra Center
               </p>
               <p className="mt-1 text-sm text-bone/80">
-                Av. Oceânica, 551 - sala 106 - Barra
+                Av. Oceânica, 551 - sala 211 - Barra
               </p>
               <p className="text-sm text-bone/60">Salvador - BA, CEP 40140-080</p>
               <p className="mt-2 text-xs italic text-gold">Em frente ao mar e próximo ao Farol da Barra</p>

@@ -38,12 +38,12 @@ const stylesList = [
 
 export default function Styles() {
   return (
-    <section id="estilos" className="scroll-mt-20 py-24 md:py-32 bg-void">
+    <section id="estilos" className="scroll-mt-20 py-24 md:py-32 bg-coal border-t border-white/5">
       <div className="mx-auto max-w-7xl px-4 md:px-8">
         <div className="reveal flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div>
             <span className="font-mono text-xs uppercase tracking-[0.25em] text-gold font-bold">
-              02 — Estilos &amp; Linguagens
+              03 — Estilos &amp; Linguagens
             </span>
             <SectionTitle className="mt-3">
               Versatilidade
@@ -62,7 +62,7 @@ export default function Styles() {
           {stylesList.map((item) => (
             <div
               key={item.name}
-              className="group relative overflow-hidden border border-white/10 bg-coal transition-all duration-300 hover:border-gold hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(216,195,174,0.15)]"
+              className="group relative overflow-hidden border border-white/10 bg-void transition-all duration-300 hover:border-gold hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(216,195,174,0.15)]"
             >
               <div className="relative aspect-[3/4] w-full overflow-hidden">
                 <Image

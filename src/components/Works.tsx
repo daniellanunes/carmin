@@ -76,12 +76,12 @@ export default function Works() {
   const shown = filtered.slice(0, visible);
 
   return (
-    <section id="galeria" className="scroll-mt-20 py-24 md:py-32 bg-coal border-t border-white/5">
+    <section id="galeria" className="scroll-mt-20 py-24 md:py-32 bg-void border-t border-white/5">
       <div className="mx-auto max-w-7xl px-4 md:px-8">
         <div className="reveal flex flex-wrap items-end justify-between gap-6">
           <div>
             <span className="font-mono text-xs uppercase tracking-[0.25em] text-gold font-bold">
-              03 — Galeria Oficial
+              04 — Galeria Oficial
             </span>
             <SectionTitle className="mt-3">
               Trabalhos
@@ -140,8 +140,8 @@ export default function Works() {
                   <span className="font-serif text-sm font-semibold text-bone">
                     {item.title}
                   </span>
-                  <span className="grid h-7 w-7 place-items-center rounded-full bg-gold text-void text-xs">
-                    ✦
+                  <span className="grid h-7 w-7 place-items-center rounded-full bg-gold text-void text-xs font-bold">
+                    ↗
                   </span>
                 </div>
               </div>
