@@ -44,7 +44,7 @@ export default function Footer() {
             <p className="mt-6 max-w-sm text-sm leading-relaxed text-bone/70">
               “Um corpo sem pintura é um corpo mudo.”
               <br />
-              Tatuagens autorais, técnicas exclusivas e projeto Os Selos no Salvador Tattoo Studio.
+              Tatuagens autorais, técnicas exclusivas e projeto Os Selos no Salvador Tattoo Estudio.
             </p>            
           </div>
 

@@ -35,7 +35,7 @@ export default function Manifesto() {
             <SectionTitle className="mt-3">
               Tom Cash
               <br />
-              Salvador Tattoo Studio
+              Salvador Tattoo Estudio
             </SectionTitle>
 
             <p className="mt-6 text-base leading-relaxed text-bone/90 md:text-lg">

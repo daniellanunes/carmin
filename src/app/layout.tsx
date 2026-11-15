@@ -21,9 +21,9 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "TomCash Tattoo | Salvador Tattoo Studio",
+  title: "TomCash Tattoo | Salvador Tattoo Estudio",
   description:
-    "Um corpo sem pintura é um corpo mudo. Tatuagens autorais, exclusivas e o projeto Os Selos por Tom Cash no Salvador Tattoo Studio, Barra Center, Salvador - BA.",
+    "Um corpo sem pintura é um corpo mudo. Tatuagens autorais, exclusivas e o projeto Os Selos por Tom Cash no Salvador Tattoo Estudio, Barra Center, Salvador - BA.",
   icons: {
     icon: "/Iluminart_Vetor_PB_Principal.svg",
     shortcut: "/Iluminart_Vetor_PB_Principal.svg",

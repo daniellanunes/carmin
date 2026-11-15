@@ -7,17 +7,17 @@ import { Arrow, SectionTitle } from "./Ui";
 const studioPhotos = [
   {
     src: "/assets/estudio/estudio-janela.webp",
-    alt: "Salvador Tattoo Studio - Macas de atendimento com vista para o mar",
+    alt: "Salvador Tattoo Estudio - Macas de atendimento com vista para o mar",
     caption: "Iluminação natural e vista privilegiada para o mar",
   },
   {
     src: "/assets/estudio/estudio-maca.webp",
-    alt: "Salvador Tattoo Studio - Sala de atendimento com painel de madeira",
+    alt: "Salvador Tattoo Estudio - Sala de atendimento com painel de madeira",
     caption: "Ambiente climatizado e acolhedor",
   },
   {
     src: "/assets/estudio/studio_bancada.webp",
-    alt: "Salvador Tattoo Studio - Bancadas e vista para o mar",
+    alt: "Salvador Tattoo Estudio - Bancadas e vista para o mar",
     caption: "Estrutura profissional de alto padrão",
   },
   
@@ -42,11 +42,11 @@ export default function Studio() {
             <SectionTitle className="mt-3">
               Salvador Tattoo
               <br />
-              Studio
+              Estudio
             </SectionTitle>
 
             <p className="mt-6 text-base leading-relaxed text-bone/90">
-              O <strong>Salvador Tattoo Studio</strong> é um estúdio que fundei com outros profissionais
+              O <strong>Salvador Tattoo Estudio</strong> é um estúdio que fundei com outros profissionais
               apaixonados pela arte da tatuagem. Localizado na Barra, um dos bairros mais icônicos de Salvador,
               com vista privilegiada para o mar e o Farol — um verdadeiro cartão-postal da cidade.
             </p>

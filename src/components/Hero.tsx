@@ -134,7 +134,7 @@ export default function Hero() {
           <p className="mt-5 max-w-xl text-sm sm:text-base leading-relaxed text-bone/90 lg:text-lg drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
             Tom é um tatuador reconhecido por sua versatilidade e olhar artístico apurado.
             Com uma abordagem que une técnica refinada e sensibilidade estética, criando
-            peças únicas no <strong>Salvador Tattoo Studio</strong>, em frente ao mar da Barra.
+            peças únicas no <strong>Salvador Tattoo Estudio</strong>, em frente ao mar da Barra.
           </p>
 
           <div className="mt-7 flex flex-wrap items-center gap-3 sm:gap-4">
@@ -192,7 +192,7 @@ export default function Hero() {
               />
             ))}
             <span className="ml-2 font-mono text-[10px] sm:text-xs uppercase tracking-[0.18em] text-fog">
-              Salvador Tattoo Studio · Salvador - BA
+              Salvador Tattoo Estudio · Salvador - BA
             </span>
           </div>
         </div>
