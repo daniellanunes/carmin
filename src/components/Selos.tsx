@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { Arrow, SectionTitle, Star } from "./Ui";
+import { Arrow, SectionTitle } from "./Ui";
 
 const selosList = [
   {
@@ -63,27 +63,36 @@ const selosList = [
 
 export default function Selos() {
   const [active, setActive] = useState(2);
+  const [isPaused, setIsPaused] = useState(false);
   const current = selosList[active];
-  const scrollerRef = useRef<HTMLDivElement>(null);
-  const firstRun = useRef(true);
+  const touchStartX = useRef<number | null>(null);
+  const total = selosList.length;
+  const half = Math.floor(total / 2);
 
-  // Centraliza o selo ativo no carrossel (sem mexer na rolagem vertical da página).
+  const prev = () => setActive((i) => (i - 1 + total) % total);
+  const next = () => setActive((i) => (i + 1) % total);
+
   useEffect(() => {
-    const scroller = scrollerRef.current;
-    if (!scroller) return;
-    const behavior: ScrollBehavior = firstRun.current ? "instant" : "smooth";
-    firstRun.current = false;
-    const center = () => {
-      const el = scroller.querySelectorAll<HTMLElement>("[data-selo]")[active];
-      if (!el) return;
-      const left = el.offsetLeft + el.offsetWidth / 2 - scroller.clientWidth / 2;
-      scroller.scrollTo({ left, behavior });
-    };
-    center();
-    // o selo cresce com transição de 500ms; recentraliza ao final
-    const t = setTimeout(center, 520);
-    return () => clearTimeout(t);
-  }, [active]);
+    if (isPaused) return;
+    const timer = setInterval(() => {
+      setActive((i) => (i + 1) % total);
+    }, 3500);
+    return () => clearInterval(timer);
+  }, [isPaused, active, total]);
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX.current === null) return;
+    const delta = e.changedTouches[0].clientX - touchStartX.current;
+    touchStartX.current = null;
+    if (Math.abs(delta) > 40) {
+      if (delta < 0) next();
+      else prev();
+    }
+  };
 
   return (
     <section id="selos" className="scroll-mt-20 py-24 md:py-32 bg-coal border-t border-white/5 relative overflow-hidden">
@@ -105,11 +114,27 @@ export default function Selos() {
           </p>
         </div>
 
-        {/* Carrossel / Galeria dos Selos */}
-        <div ref={scrollerRef} className="no-scrollbar relative mt-16 -mx-4 overflow-x-auto px-4 py-6">
-        <div className="mx-auto flex w-max items-center gap-3 md:gap-6">
+        {/* Carrossel Centralizado dos Selos */}
+        <div
+          className="relative mt-12 h-[300px] sm:h-[360px] md:h-[440px] select-none overflow-hidden [--s1:160px] sm:[--s1:204px] md:[--s1:268px] [--s:88px] sm:[--s:124px] md:[--s:176px]"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+        >
           {selosList.map((selo, idx) => {
-            const isActive = idx === active;
+            const diff = ((idx - active + total + half) % total) - half;
+            const abs = Math.abs(diff);
+            const isActive = diff === 0;
+            const isVisible = abs <= 3;
+
+            const offsetX =
+              diff === 0
+                ? "0px"
+                : diff > 0
+                  ? `calc(var(--s1) + ${diff - 1} * var(--s))`
+                  : `calc(-1 * (var(--s1) + ${-diff - 1} * var(--s)))`;
+
             return (
               <button
                 key={selo.id}
@@ -117,16 +142,24 @@ export default function Selos() {
                 data-selo
                 onClick={() => setActive(idx)}
                 aria-label={`Ver ${selo.name}`}
-                className={`relative shrink-0 transition-all duration-500 overflow-hidden border ${
+                aria-current={isActive ? "true" : undefined}
+                tabIndex={isVisible ? 0 : -1}
+                style={{
+                  transform: `translate(calc(-50% + ${offsetX}), -50%) scale(${isActive ? 1.05 : 0.95})`,
+                }}
+                className={`absolute left-1/2 top-1/2 aspect-[4/5] overflow-hidden border transition-all duration-500 ease-out ${
                   isActive
-                    ? "w-52 sm:w-64 md:w-80 aspect-[4/5] border-gold shadow-[0_0_30px_rgba(216,195,174,0.3)] z-10 scale-105"
-                    : "w-20 sm:w-28 md:w-40 aspect-[4/5] border-white/10 opacity-50 hover:opacity-80 scale-95"
+                    ? "z-20 w-52 sm:w-64 md:w-80 border-gold shadow-[0_0_30px_rgba(216,195,174,0.3)] opacity-100"
+                    : isVisible
+                      ? "z-10 w-20 sm:w-28 md:w-40 border-white/10 opacity-50 hover:opacity-85 cursor-pointer"
+                      : "z-0 w-20 sm:w-28 md:w-40 border-white/10 opacity-0 pointer-events-none"
                 }`}
               >
                 <Image
                   src={selo.src}
                   alt={selo.name}
                   fill
+                  sizes="(max-width: 640px) 220px, (max-width: 768px) 280px, 340px"
                   className="object-cover"
                 />
                 {isActive && (
@@ -136,6 +169,20 @@ export default function Selos() {
             );
           })}
         </div>
+
+        {/* Indicadores do Carrossel */}
+        <div className="mt-4 flex items-center justify-center gap-2">
+          {selosList.map((selo, idx) => (
+            <button
+              key={selo.id}
+              type="button"
+              onClick={() => setActive(idx)}
+              aria-label={`Ir para ${selo.name}`}
+              className={`h-1.5 rounded-full transition-all duration-300 cursor-pointer ${
+                idx === active ? "w-6 bg-gold" : "w-1.5 bg-white/25 hover:bg-white/50"
+              }`}
+            />
+          ))}
         </div>
 
         {/* Detalhe do Selo Ativo */}
