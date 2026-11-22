@@ -6,17 +6,17 @@ import { Arrow, SectionTitle, Star } from "./Ui";
 const stylesList = [
   {
     name: "Blackwork",
-    image: "/assets/IMG_1-DeMZbL7N.webp",
+    image: "/assets/estilos/blackwork.webp",
     desc: "Preenchimentos sólidos, contrastes profundos e texturas ricas.",
   },
   {
     name: "Fine line",
-    image: "/assets/IMG_2-BR816FZN.webp",
+    image: "/assets/estilos/fine-line.webp",
     desc: "Traços delicados, precisão cirúrgica e leveza estética.",
   },
   {
     name: "Colorido",
-    image: "/assets/IMG_3-DlbDNVR-.webp",
+    image: "/assets/estilos/colorido.webp",
     desc: "Pigmentação viva, saturação marcante e inspiração em tinta a óleo.",
   },
   {
@@ -31,7 +31,7 @@ const stylesList = [
   },
   {
     name: "Artístico & Autoral",
-    image: "/assets/IMG_6-BCoGd3cX.webp",
+    image: "/assets/estilos/autoral.webp",
     desc: "Composições originais unindo elementos orgânicos e geométricos.",
   },
 ];

@@ -10,12 +10,8 @@ const worksData = [
   { id: 3, title: "Crânio & Geometria", category: "Blackwork", src: "/assets/IMG_4-BpWmXPlo.webp" },
   { id: 4, title: "Ilustração Poética", category: "Fine line", src: "/assets/IMG_5-kSviiu_O.webp" },
   { id: 5, title: "Criação Exclusiva", category: "Autoral", src: "/assets/IMG_6-tTrvDqcq.webp" },
-  { id: 6, title: "Traço Sutil Anatômico", category: "Fine line", src: "/assets/IMG_7-B6qWZTSN.webp" },
-  { id: 7, title: "Figura Mitológica", category: "Artístico", src: "/assets/IMG_8-CuUeIMJM.webp" },
   { id: 8, title: "Textura & Sombras Óleo", category: "Artístico", src: "/assets/IMG_9-WwO-LOUo.webp" },
-  { id: 9, title: "Floral em Movimento", category: "Colorido", src: "/assets/IMG_10-BNyXj12z.webp" },
   { id: 10, title: "Traço Firme & Bold", category: "Blackwork", src: "/assets/IMG_11-Day_5IZq.webp" },
-  { id: 11, title: "Composição em Camadas", category: "Artístico", src: "/assets/IMG_12-Dxsfue5w.webp" },
   { id: 12, title: "Fechamento Detalhado", category: "Autoral", src: "/assets/IMG_13-D1n2Y5nI.webp" },
   ...(
     [
@@ -58,7 +54,7 @@ const worksData = [
     title,
     category,
     src: `/assets/galeria/tattoo-${String(i + 1).padStart(2, "0")}.webp`,
-  })),
+  })).filter((work) => work.title !== "Olhar Anime"),
 ];
 
 const PAGE_SIZE = 12;
