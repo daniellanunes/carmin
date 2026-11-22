@@ -12,7 +12,7 @@ const worksData = [
   { id: 5, title: "Criação Exclusiva", category: "Autoral", src: "/assets/IMG_6-tTrvDqcq.webp" },
   { id: 8, title: "Textura & Sombras Óleo", category: "Artístico", src: "/assets/IMG_9-WwO-LOUo.webp" },
   { id: 10, title: "Traço Firme & Bold", category: "Blackwork", src: "/assets/IMG_11-Day_5IZq.webp" },
-  { id: 12, title: "Fechamento Detalhado", category: "Autoral", src: "/assets/IMG_13-D1n2Y5nI.webp" },
+  { id: 12, title: "Fechamento Detalhado", category: "Autoral", src: "/assets/IMG_13-D1n2Y5nI.webp" }, 
   ...(
     [
       ["Pescoço & Lettering", "Blackwork"],
